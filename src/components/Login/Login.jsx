@@ -19,7 +19,7 @@ function Login() {
         <form onSubmit={submitHandler}>
             <label> email</label>
                 <input type='text' onChange={emailHandler}/>
-            <label>Password</label>
+            <label>Passwordd</label>
                 <input type='text'/>
             <button type='submit'>Login</button>
         </form>
