@@ -22,13 +22,15 @@ function Login(props) {
   return (
     <div className='login-container'>
         <form onSubmit={submitHandler} className='login-form'>
-            <h1>Get your favorite food delivered!</h1>
-            <label className='label'> email</label>
+            <h1 className='login-title'>Get your favorite food delivered!</h1>
+            <label className='label'> Email</label>
                 <input className='input' type='text' onChange={emailHandler}/>
             <label className='label'>Password</label>
                 <input className='input' type='text'onChange={passwordHandler}/>
-            <button type='submit' className='login-button'>Login</button>
+            <button type='submit' className='button-1'>Login</button>
+            <button className='button-1'>Sign up</button>
         </form>
+
     </div>
   )
 }

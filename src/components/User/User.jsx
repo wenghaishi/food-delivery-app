@@ -7,9 +7,9 @@ function User() {
     <div className='user-container'>
         <div className='user-main'>
           <h1>User settings</h1>
-          <button className='user-button'>Change password</button>
-          <button className='user-button'>Change address</button>
-          <button className='user-button'>Change Email</button>
+          <button className='button-1'>Change password</button>
+          <button className='button-1'>Change address</button>
+          <button className='button-1'>Change Email</button>
         </div>
     </div>
   )

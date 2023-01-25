@@ -9,6 +9,7 @@ import {  Link, Routes, Route } from "react-router-dom";
 function Card(props) {
   return (
     <div className='card'>
+      
       <Link to={`/info/${props.id}`}><img className='img' src={props.url}></img></Link>
       <div className='breed'>
         <h1 className='name'>{props.title}</h1>

@@ -16,7 +16,9 @@
 .login-container {
     justify-content: center;
     display: flex;
-
+    height:100vh;
+    background-size: cover;
+    background-image: url('https://images.unsplash.com/photo-1605926637512-c8b131444a4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80');
 }
 
 .login-button {
@@ -25,16 +27,64 @@
     width: 51.5%;
     margin-top:30px;
     font-weight: bold;
+    background-color: crimson;
+}
+
+.login-title {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 36px;
+
+    margin-top: -20px;
 }
 
 .label {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    text-align: left;
+    display: block;
+    margin-left: 109px;
+    align-self: baseline;
+    
 }
 
 .input {
     margin-bottom: 20px;
     width: 50%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
+
+/* CSS */
+.button-1 {
+  width: 51.5%;
+  margin-top:30px;
+  background-color: #e43030;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover,
+.button-1:focus {
+  background-color: #cf1c10;
+}

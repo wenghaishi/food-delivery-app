@@ -14,7 +14,7 @@ function Header(props) {
         <Link to="/"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Gofood_logo.svg/2560px-Gofood_logo.svg.png' className='header-img'/></Link>
         {props.loggedIn === true && 
             <div className='basket-container'>
-              <Link to="/"><button onClick={props.logout} className='logout-button'>Logout</button></Link>
+              <Link to="/"><button onClick={props.logout} className='button-2'>Logout</button></Link>
               <Link to='user'><FaUserAlt className='logo-basket'/> </Link>
               <Link to='basket'><MdShoppingBasket className='logo-basket'/> </Link>
             </div>
