@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
-import Card from './components/Card'
 import Header from './components/Header'
 import Login from './components/Login/Login'
+import Card from './components/Card'
+import {  Link, Routes, Route } from "react-router-dom";
 
 
 const restuarant = [
@@ -131,22 +131,45 @@ const restuarant = [
 
 function App() {
 
-  const [logggedIn, isLoggedIn] = useState(false)
+
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('loggedIn')
+
+    if (storedUser === '1') {
+      setLoggedIn(true)
+    }
+  
+  })
+
+  const logoutHandler = () => {
+    localStorage.removeItem('loggedIn'); 
+    setLoggedIn(false)
+  }
 
 
+  const loginHandler = () => {
+    setLoggedIn(true)
+  }
+  
 
   return (
-    <>
-      <Header />
-      {logggedIn === false && <Login />}
-      {logggedIn === true &&
+    <div>
+    <Header logout={logoutHandler} loggedIn={loggedIn}/>
+      {loggedIn === false && <Login login={loginHandler}/>}
+      {
+        loggedIn === true &&
         <div className='container1'>
         <div className='grid'>
           {restuarant.map((restuarant) => (<Card title={restuarant.RestName} rating={restuarant.rating} 
-          review={restuarant.reviewNo} fee={restuarant.deliveryFee} url={restuarant.url} description={restuarant.description}/>))}
+          review={restuarant.reviewNo} fee={restuarant.deliveryFee} url={restuarant.url} 
+          description={restuarant.description} key={restuarant.id}/>))}
         </div>
-      </div>}  
-    </>
+      </div>
+      }  
+    </div>
+
   )
 }
 

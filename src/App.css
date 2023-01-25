@@ -1,6 +1,11 @@
 body {
   margin:0;
+}
 
+.body-container {
+    display: flex; 
+    justify-self: center;
+    align-self: center;
 }
 .grid {
   display: grid;
