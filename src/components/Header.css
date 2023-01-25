@@ -9,11 +9,14 @@
     justify-content: space-between;
     overflow: hidden;
     vertical-align: middle;
+    align-items: center;
 }
 
 .header-img {
-    width: 180px;
-    height:100px;
+    width: 250px;
+    height:60px;
+    display: flex;
+
 }
 
 .logout-button {
