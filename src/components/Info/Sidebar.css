@@ -1,7 +1,7 @@
 .sidebar {
     min-width:200px;
     width: 25%;
-    background-color: rgb(188, 208, 250);
+    background-color: rgb(255, 255, 255);
     text-align: center;
     height: 100%;
     min-width: 230px;
@@ -10,6 +10,8 @@
     justify-content: space-between;
     position: fixed;
     right:0;
+    border-left: 0.1px solid rgb(255, 255, 255);
+    box-shadow: -5px 0 5px rgb(220, 220, 220);
 
 }
 
