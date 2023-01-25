@@ -9,7 +9,7 @@ function Header(props) {
   return (
 
     <div className='header'>
-        <Link to="/"><img src="src/assets/logo.png" className='header-img'/></Link>
+        <Link to="/"><img src={require=("src/assets/logo.png")} className='header-img'/></Link>
         {props.loggedIn === true && 
             <div className='basket-container'>
               <Link to="/"><button onClick={props.logout} className='logout-button'>Logout</button></Link>
