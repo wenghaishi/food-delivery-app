@@ -12,13 +12,11 @@ function Header(props) {
         <Link to="/"><img src="src/assets/logo.png" className='header-img'/></Link>
         {props.loggedIn === true && 
             <div className='basket-container'>
-              <button onClick={props.logout} className='logout-button'>Logout</button>
+              <Link to="/"><button onClick={props.logout} className='logout-button'>Logout</button></Link>
               <Link to='user'><FaUserAlt className='logo-basket'/> </Link>
-              <MdShoppingBasket className='logo-basket'/>
+              <Link to='basket'><MdShoppingBasket className='logo-basket'/> </Link>
             </div>
         }
-
-
     </div>
 
 

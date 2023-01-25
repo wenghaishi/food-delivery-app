@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Login from './components/Login/Login'
 import Card from './components/Card'
 import {  Link, Routes, Route } from "react-router-dom";
+import User from './components/User/User.jsx'
+import Basket from './components/Basket/Basket'
 
 
 const restuarant = [
@@ -150,25 +152,32 @@ function App() {
 
 
   const loginHandler = () => {
+    localStorage.setItem('loggedIn' , '1')
     setLoggedIn(true)
   }
   
 
   return (
-    <div>
+    <>
     <Header logout={logoutHandler} loggedIn={loggedIn}/>
-      {loggedIn === false && <Login login={loginHandler}/>}
-      {
-        loggedIn === true &&
-        <div className='container1'>
-        <div className='grid'>
-          {restuarant.map((restuarant) => (<Card title={restuarant.RestName} rating={restuarant.rating} 
-          review={restuarant.reviewNo} fee={restuarant.deliveryFee} url={restuarant.url} 
-          description={restuarant.description} key={restuarant.id}/>))}
-        </div>
-      </div>
-      }  
-    </div>
+    <Routes>
+        <Route path='/' element={<>
+            {loggedIn === false && <Login login={loginHandler}/>}
+            {
+                loggedIn === true &&
+                <div className='container1'>
+                <div className='grid'>
+                {restuarant.map((restuarant) => (<Card title={restuarant.RestName} rating={restuarant.rating} 
+                review={restuarant.reviewNo} fee={restuarant.deliveryFee} url={restuarant.url} 
+                description={restuarant.description} key={restuarant.id}/>))}
+                </div>
+            </div>
+            }</>}
+        />
+        <Route path='/user' element={<User/>}/>
+        <Route path='basket' element={<Basket/>}/>
+      </Routes>
+    </>
 
   )
 }
