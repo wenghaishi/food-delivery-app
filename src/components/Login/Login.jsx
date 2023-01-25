@@ -22,6 +22,7 @@ function Login(props) {
   return (
     <div className='login-container'>
         <form onSubmit={submitHandler} className='login-form'>
+            <h1>Get your favorite food delivered!</h1>
             <label className='label'> email</label>
                 <input className='input' type='text' onChange={emailHandler}/>
             <label className='label'>Password</label>

@@ -1,12 +1,15 @@
 import React from 'react'
 import './Card.css'
 import { AiFillStar } from 'react-icons/ai';
+import {  Link, Routes, Route } from "react-router-dom";
+
+
 
 
 function Card(props) {
   return (
     <div className='card'>
-      <img className='img' src={props.url}></img>
+      <Link to={`/info/${props.id}`}><img className='img' src={props.url}></img></Link>
       <div className='breed'>
         <h1 className='name'>{props.title}</h1>
         <div className='rating-container'>

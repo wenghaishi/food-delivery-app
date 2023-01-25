@@ -6,6 +6,7 @@ import Card from './components/Card'
 import {  Link, Routes, Route } from "react-router-dom";
 import User from './components/User/User.jsx'
 import Basket from './components/Basket/Basket'
+import Info from './components/Info/Info'
 
 
 const restuarant = [
@@ -16,8 +17,26 @@ const restuarant = [
     reviewNo: '456',
     deliveryFee: '$4.99',
     description: "Delicious fried chicken.",
-    id: 1,
+    id: '1',
     type: 'western fastfood',
+    item: [
+        {
+            item: 'Original chicken',
+            price: 3,
+        },
+        {
+            item: 'Spicy chicken',
+            price: 3
+        },
+        {
+            item: 'Zinger burger',
+            price: 5.4
+        },
+        {
+            item: '3 piece chicken meal',
+            price: 11.5
+        }
+    ]
   },
   {
     RestName: 'Baskin Robbins',
@@ -26,8 +45,30 @@ const restuarant = [
     reviewNo: '78',
     deliveryFee: '$4.99',
     description: "Ice cream for the family. ",
-    id: 2,
-    type: 'western dessert'
+    id: '2',
+    type: 'western dessert',
+    item: [
+        {
+            item: 'Ice-cream',
+            url: 'https://www.singmenu.com/wp-content/uploads/Baskin-Robbins-Menu.jpg',
+            price: 5,
+        },
+        {
+            item: 'Donut',
+            url: 'https://static.onecms.io/wp-content/uploads/sites/43/2022/05/26/45921-crispy-and-creamy-doughnuts-ddmfs-638-3x4-1.jpg',
+            price: 6
+        },
+        {
+            item: 'Ice-cream cake (whole) cake cake cake cake cake cake',
+            url: 'https://imengine.prod.srp.navigacloud.com/?uuid=BA695FE3-3B10-4F6A-B62A-D18EC94F4560&type=primary&q=72&width=1024',
+            price: 30
+        },
+        {
+            item: 'lucky cake (whole)',
+            url: 'https://media.graphassets.com/resize=fit:max,width:1440/output=format:png/oY7DoFkRQ2KSiuijrBng',
+            price: 35
+        }
+    ]
   },
   {
     RestName: 'CUT by Wolfgang Puck',
@@ -36,7 +77,7 @@ const restuarant = [
     reviewNo: '61',
     deliveryFee: '$8.99',
     description: "Award winning steakhouse by celebrity chef Wolfgang Puck.",
-    id: 3,
+    id: '3',
     type: 'steak western'
   },
   {
@@ -46,7 +87,7 @@ const restuarant = [
     reviewNo: '102',
     deliveryFee: '$6.99',
     description: "Great tender chicken rice.",
-    id: 4,
+    id: '4',
     type: 'chicken asian'
   },
   {
@@ -56,7 +97,7 @@ const restuarant = [
     reviewNo: '46',
     deliveryFee: '$4.99',
     description: "Hot, spicy indian cuisine.",
-    id: 5,
+    id: '5',
     type: 'indian spicy asian'
   },
   {
@@ -66,7 +107,7 @@ const restuarant = [
     reviewNo: '22',
     deliveryFee: '$4.99',
     description: "Sushi, ramen and bento.",
-    id: 6,
+    id: '6',
     type: 'japanese sushi asian'
   },
   {
@@ -76,7 +117,7 @@ const restuarant = [
     reviewNo: '231',
     deliveryFee: '$9.99',
     description: "Hotpot for the family.",
-    id: 7,
+    id: '7',
     type:" hotpot asian"
   },
   {
@@ -86,7 +127,7 @@ const restuarant = [
     reviewNo: '201',
     deliveryFee: '$5.99',
     description: "Delicious ramen with bone broth and Char siew.",
-    id: 8,
+    id: '8',
     type:" japanese asian ramen"
   },
   {
@@ -96,7 +137,7 @@ const restuarant = [
     reviewNo: '2',
     deliveryFee: '$5.99',
     description: "Famous fried chicken with delicious sides.",
-    id: 9,
+    id: '9',
     type:"western chicken "
   },
   {
@@ -106,7 +147,7 @@ const restuarant = [
     reviewNo: '87',
     deliveryFee: '$5.99',
     description: "Beef shortribs, pork belly slices, prawns and marinated chicken.",
-    id: 10,
+    id: '10',
     type:"asian bbq "
   },
   {
@@ -116,7 +157,7 @@ const restuarant = [
     reviewNo: '55',
     deliveryFee: 'Free',
     description: "Tender and delicious steamed and roasted chicken rice.",
-    id: 11,
+    id: '11',
     type:"asian chicken "
   },
   {
@@ -126,7 +167,7 @@ const restuarant = [
     reviewNo: '90',
     deliveryFee: 'Free',
     description: "pizza pasta western",
-    id: 12,
+    id: '12',
     type:"western italian pizza "
   },
 ]
@@ -169,13 +210,14 @@ function App() {
                 <div className='grid'>
                 {restuarant.map((restuarant) => (<Card title={restuarant.RestName} rating={restuarant.rating} 
                 review={restuarant.reviewNo} fee={restuarant.deliveryFee} url={restuarant.url} 
-                description={restuarant.description} key={restuarant.id}/>))}
+                description={restuarant.description} key={restuarant.id} id={restuarant.id}/>))}
                 </div>
             </div>
             }</>}
         />
         <Route path='/user' element={<User/>}/>
-        <Route path='basket' element={<Basket/>}/>
+        <Route path='/basket' element={<Basket/>}/>
+        <Route path='/info/:restId' element={<Info rest={restuarant}/>}/>
       </Routes>
     </>
 

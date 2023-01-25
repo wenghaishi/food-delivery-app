@@ -1,0 +1,48 @@
+.item-img {
+    width: 180px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform .1s;
+}
+
+.item-img:hover {
+    transform: scale(1.02); 
+  }
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 20px 20px 20px;
+    text-align: left;
+    max-width:550px;
+
+}
+
+.item-sm-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    justify-content: center;
+
+}
+
+.item-name {
+    display: block;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:200px;
+}
+
+@media screen and (max-width: 1200px) {
+    .item-name {
+      width: 300px;
+    }
+  }
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+}

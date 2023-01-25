@@ -9,11 +9,14 @@
     border-radius: 3%;
     margin-top: 40px;
     font-size: large;
+    margin-top: 150px;
+    text-align: center;
 }
 
 .login-container {
     justify-content: center;
     display: flex;
+
 }
 
 .login-button {
