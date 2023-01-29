@@ -1,8 +1,9 @@
 .item-img {
     width: 180px;
-    height: 100px;
+    height:140px;
     object-fit: cover;
     transition: transform .1s;
+    border-radius: 10px;
 }
 
 .item-img:hover {
@@ -16,7 +17,6 @@
     padding: 20px 20px 20px 20px;
     text-align: left;
     max-width:550px;
-
 }
 
 .item-sm-container {
@@ -24,11 +24,11 @@
     flex-direction: column;
     padding-right: 10px;
     justify-content: center;
-
 }
 
 .item-name {
-    display: block;
+    display: flex;  
+    flex: 0 1 auto; 
     font-size: 20px;
     white-space: nowrap;
     overflow: hidden;

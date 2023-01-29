@@ -12,7 +12,7 @@ function Sidebar(props) {
         </div>
         <div className='checkout-container'>
             <p>Subtotal:</p>
-            <button className='checkout-button'>Checkout</button>
+            <button className='button-2'>Checkout</button>
         </div>
     </div>
   )

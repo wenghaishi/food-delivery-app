@@ -52,21 +52,25 @@ const restuarant = [
             item: 'Ice-cream',
             url: 'https://www.singmenu.com/wp-content/uploads/Baskin-Robbins-Menu.jpg',
             price: 5,
+            itemId: '1',
         },
         {
             item: 'Donut',
             url: 'https://static.onecms.io/wp-content/uploads/sites/43/2022/05/26/45921-crispy-and-creamy-doughnuts-ddmfs-638-3x4-1.jpg',
-            price: 6
+            price: 6,
+            itemId: '2',
         },
         {
             item: 'Ice-cream cake (whole) cake cake cake cake cake cake',
             url: 'https://imengine.prod.srp.navigacloud.com/?uuid=BA695FE3-3B10-4F6A-B62A-D18EC94F4560&type=primary&q=72&width=1024',
-            price: 30
+            price: 30,
+            itemId: '3',
         },
         {
             item: 'lucky cake (whole)',
             url: 'https://media.graphassets.com/resize=fit:max,width:1440/output=format:png/oY7DoFkRQ2KSiuijrBng',
-            price: 35
+            price: 35,
+            itemId: '4',
         }
     ]
   },

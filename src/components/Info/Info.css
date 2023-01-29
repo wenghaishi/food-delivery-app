@@ -2,7 +2,7 @@
     height:220px;
     width:100%;
     object-fit: cover;
-    border-bottom: 0.1px solid rgb(199, 199, 199);
+    border-bottom: 0.1px solid rgb(255, 255, 255);
     box-shadow: 0 5px 5px rgb(220, 220, 220);
 }
 
@@ -13,7 +13,6 @@
     height: 100vh;
     justify-content: space-between;
     text-align: center;
-
 }
 
 .info-m-container {
@@ -24,8 +23,6 @@
     height: 100%;
     justify-content: space-between;
     text-align: center;
-
-
 }
 
 .info-menu-container {
@@ -55,4 +52,8 @@
 
 .info-sidebar {
     flex: 1;
+}
+
+.info-restname {
+    margin-top:50px;
 }

@@ -16,7 +16,9 @@ function Header(props) {
             <div className='basket-container'>
               <Link to="/"><button onClick={props.logout} className='button-2'>Logout</button></Link>
               <Link to='user'><FaUserAlt className='logo-basket'/> </Link>
-              <Link to='basket'><MdShoppingBasket className='logo-basket'/> </Link>
+              <Link to='basket'>
+                <MdShoppingBasket className='logo-basket'/>
+              </Link>
             </div>
         }
     </div>

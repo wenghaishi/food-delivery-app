@@ -9,16 +9,15 @@ function Info(props) {
   const {restId} = useParams()
 
   const thisRest = props.rest.find((r) => r.id === restId)
-  console.log(thisRest)
 
   return (
     <div className='info-big-container'>
       <div className='info-m-container '>
         <div className='info-menu-container'>
           <img src={thisRest.url} className='info-img'/>
-          <h1>{thisRest.RestName}</h1>
+          <h1 className='info-restname'>{thisRest.RestName}</h1>
           <div className='item-container-big'>
-          {thisRest.item.map((item) => (<Item price={item.price} item={item.item} url={item.url} />))}
+          {thisRest.item.map((item) => (<Item price={item.price} rest={thisRest} item={item.item} url={item.url} id={item.itemId}/>))}
           </div>
         </div>
         <Sidebar rest={thisRest}/>
