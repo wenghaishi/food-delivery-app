@@ -7,7 +7,7 @@ import {  Link, Routes, Route } from "react-router-dom";
 import User from './components/User/User.jsx'
 import Basket from './components/Basket/Basket'
 import Info from './components/Info/Info'
-
+import { CartContext } from './context/CartContext'
 
 const restuarant = [
   {
@@ -204,6 +204,7 @@ function App() {
 
   return (
     <>
+    <CartContext.Provider value='cart numbers'>
     <Header logout={logoutHandler} loggedIn={loggedIn}/>
     <Routes>
         <Route path='/' element={<>
@@ -223,8 +224,8 @@ function App() {
         <Route path='/basket' element={<Basket/>}/>
         <Route path='/info/:restId' element={<Info rest={restuarant}/>}/>
       </Routes>
-    </>
-
+      </CartContext.Provider>
+      </>
   )
 }
 

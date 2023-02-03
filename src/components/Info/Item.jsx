@@ -7,9 +7,7 @@ function Item(props) {
 
   const {itemId} = useParams()
   const thisItem = props.rest.item.find((r) => r.id === itemId)
-  console.log(thisItem)
 
-    console.log(props.id)
     const addItemHandler = (e) => {
       console.log(e.target.value)
     }

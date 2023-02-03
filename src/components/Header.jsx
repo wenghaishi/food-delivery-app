@@ -1,15 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Header.css'
 import { MdShoppingBasket } from 'react-icons/md';
 import { FaUserAlt } from 'react-icons/fa';
 import {  Link, Routes, Route } from "react-router-dom";
-
+import { CartContext } from '../context/CartContext';
 
 
 function Header(props) {
 
-  return (
+  const Cart = useContext(CartContext)
 
+  return (
     <div className='header'>
         <Link to="/"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Gofood_logo.svg/2560px-Gofood_logo.svg.png' className='header-img'/></Link>
         {props.loggedIn === true && 
@@ -22,8 +23,6 @@ function Header(props) {
             </div>
         }
     </div>
-
-
   )
 }
 
